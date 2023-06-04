@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/views/home/home_screen.dart';
+import 'package:smart_home/views/landing_screen.dart';
 import 'package:smart_home/views/splash/splash_screen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: LandingScreen(),
     );
   }
 }

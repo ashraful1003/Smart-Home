@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
 import 'package:smart_home/views/home/frame11.dart';
 import 'package:smart_home/views/home/frame19.dart';
@@ -260,7 +261,8 @@ class HomeScreen extends StatelessWidget {
               Container(
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(vertical: 18),
-                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16.5),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16.5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: Colors.grey,
