@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:smart_home/constants.dart';
 import 'package:smart_home/views/home/home_screen.dart';
 import 'package:smart_home/views/smart_mode/smart_mode_screen.dart';
 
@@ -30,11 +31,10 @@ class _LandingScreenState extends State<LandingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: hexToColor(mains2),
           boxShadow: [
             BoxShadow(
               blurRadius: 20,
@@ -49,8 +49,9 @@ class _LandingScreenState extends State<LandingScreen> {
               gap: 8,
               activeColor: Colors.black,
               iconSize: 24,
+              tabBorderRadius: 8,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              tabBackgroundColor: Colors.grey[100]!,
+              tabBackgroundColor: Colors.white,
               color: Colors.black,
               tabs: const [
                 GButton(
@@ -59,11 +60,11 @@ class _LandingScreenState extends State<LandingScreen> {
                 ),
                 GButton(
                   icon: Icons.home,
-                  text: 'Likes',
+                  text: 'Smart',
                 ),
                 GButton(
                   icon: Icons.search,
-                  text: 'Search',
+                  text: 'Usage',
                 ),
                 GButton(
                   icon: Icons.home,

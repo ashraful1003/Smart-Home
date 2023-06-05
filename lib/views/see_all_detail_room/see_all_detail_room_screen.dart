@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/constants.dart';
 import 'package:smart_home/views/common_widget/frame34.dart';
 import 'package:smart_home/views/common_widget/frame38.dart';
+import 'package:smart_home/views/common_widget/see_all.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
+import 'package:smart_home/views/home/frame41.dart';
 
 class SeeAllDetailRoomScreen extends StatelessWidget {
   const SeeAllDetailRoomScreen({Key? key}) : super(key: key);
@@ -10,6 +13,7 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: hexToColor(mains2),
         leadingWidth: 80,
         leading: Row(
           children: [
@@ -25,21 +29,42 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
         ),
         title: TextWidget(
             text: 'Room',
-            size: 18,
+            size: 24,
             weight: FontWeight.w600,
             color: Colors.white),
         centerTitle: true,
         actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.search, color: Colors.white)),
+          Container(
+            margin: EdgeInsets.only(right: 16),
+            padding: EdgeInsets.all(6),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(25)),
+            child: GestureDetector(
+                onTap: () {},
+                child: Icon(Icons.search, color: hexToColor(mains2))),
+          ),
         ],
       ),
-      body: Column(
-        children: [
-          Frame34(text1: 'Your Rooms', text2: '10'),
-          Frame38(text: 'Add New Room'),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                child: SeeAll(text1: 'Your Rooms', text2: 'icon', text3: '10')),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              child: GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 8,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2, mainAxisExtent: 200,mainAxisSpacing: 14, crossAxisSpacing: 16),
+                  itemBuilder: (context, index) {
+                    return Frame41(image: 'assets/img_2.png', text1: '19', text2: 'Living Room', text3: '5', text4: 'devices');
+                  }),
+            )
+          ],
+        ),
       ),
     );
   }

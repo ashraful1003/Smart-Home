@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/constants.dart';
+import 'package:smart_home/views/common_widget/see_all.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
 import 'package:smart_home/views/home/frame11.dart';
 import 'package:smart_home/views/home/frame19.dart';
 import 'package:smart_home/views/home/frame32.dart';
 
+import '../common_widget/clipper.dart';
 import 'frame41.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -45,124 +47,131 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                color: hexToColor(mains2),
+              ClipPath(
+                clipper: Clipper(),
                 child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16.5),
-                  padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
                   decoration: BoxDecoration(
-                      color: hexToColor(roombg),
-                      borderRadius: BorderRadius.circular(28)),
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.symmetric(vertical: 12),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Container(
-                                    width: 60,
-                                    height: 60,
-                                    child: Image.asset(
-                                      "assets/img_1.png",
-                                      fit: BoxFit.fill,
-                                    )),
-                                const SizedBox(width: 12),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    TextWidget(
-                                        text: "May 16, 2023 10:05 am",
-                                        size: 12,
-                                        weight: FontWeight.w400,
-                                        color: Colors.black),
-                                    TextWidget(
-                                        text: "Cloudy",
-                                        size: 18,
-                                        weight: FontWeight.w600,
-                                        color: Colors.black),
-                                    TextWidget(
-                                        text: "Jakarta, Indonesia",
-                                        size: 12,
-                                        weight: FontWeight.w400,
-                                        color: Colors.black),
-                                  ],
-                                )
-                              ],
-                            ),
-                            Container(
-                              width: 60,
-                              height: 45,
-                              child: Stack(
-                                alignment: Alignment.topRight,
+                    color: hexToColor(mains2),
+                    borderRadius:
+                        BorderRadius.only(bottomLeft: Radius.circular(35)),
+                  ),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16.5),
+                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                    decoration: BoxDecoration(
+                        color: hexToColor(roombg),
+                        borderRadius: BorderRadius.circular(28)),
+                    child: Column(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(vertical: 12),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                 children: [
-                                  Positioned(
-                                    right: 15,
-                                    child: TextWidget(
-                                        text: "19",
-                                        size: 40,
-                                        weight: FontWeight.w600,
-                                        color: Colors.black),
-                                  ),
-                                  Positioned(
-                                    top: 5,
-                                    right: 10,
-                                    child: Container(
-                                      height: 12,
-                                      width: 12,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                            color: Colors.black, width: 3),
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                    ),
-                                  ),
-                                  Positioned(
-                                      right: 0,
-                                      top: 8,
-                                      child: TextWidget(
-                                          text: 'c',
-                                          size: 30,
+                                  Container(
+                                      width: 60,
+                                      height: 60,
+                                      child: Image.asset(
+                                        "assets/img_1.png",
+                                        fit: BoxFit.fill,
+                                      )),
+                                  const SizedBox(width: 12),
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      TextWidget(
+                                          text: "May 16, 2023 10:05 am",
+                                          size: 12,
+                                          weight: FontWeight.w400,
+                                          color: Colors.black),
+                                      TextWidget(
+                                          text: "Cloudy",
+                                          size: 18,
                                           weight: FontWeight.w600,
-                                          color: Colors.black))
+                                          color: Colors.black),
+                                      TextWidget(
+                                          text: "Jakarta, Indonesia",
+                                          size: 12,
+                                          weight: FontWeight.w400,
+                                          color: Colors.black),
+                                    ],
+                                  )
                                 ],
                               ),
-                            )
+                              Container(
+                                width: 60,
+                                height: 45,
+                                child: Stack(
+                                  alignment: Alignment.topRight,
+                                  children: [
+                                    Positioned(
+                                      right: 15,
+                                      child: TextWidget(
+                                          text: "19",
+                                          size: 40,
+                                          weight: FontWeight.w600,
+                                          color: Colors.black),
+                                    ),
+                                    Positioned(
+                                      top: 5,
+                                      right: 10,
+                                      child: Container(
+                                        height: 12,
+                                        width: 12,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Colors.black, width: 3),
+                                          borderRadius: BorderRadius.circular(50),
+                                        ),
+                                      ),
+                                    ),
+                                    Positioned(
+                                        right: 0,
+                                        top: 8,
+                                        child: TextWidget(
+                                            text: 'c',
+                                            size: 30,
+                                            weight: FontWeight.w600,
+                                            color: Colors.black))
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Divider(
+                          thickness: 2,
+                          color: hexToColor(mains2),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Frame11(
+                              iconData: Icons.ac_unit,
+                              text1: "Humadity",
+                              text2: "97",
+                              text3: "%",
+                            ),
+                            Frame11(
+                              iconData: Icons.ac_unit,
+                              text1: "Visibility",
+                              text2: "7",
+                              text3: "km",
+                            ),
+                            Frame11(
+                              iconData: Icons.ac_unit,
+                              text1: "NE wind",
+                              text2: "3",
+                              text3: "km/h",
+                            ),
                           ],
                         ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                        color: hexToColor(mains2),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Frame11(
-                            iconData: Icons.ac_unit,
-                            text1: "Humadity",
-                            text2: "97",
-                            text3: "%",
-                          ),
-                          Frame11(
-                            iconData: Icons.ac_unit,
-                            text1: "Visibility",
-                            text2: "7",
-                            text3: "km",
-                          ),
-                          Frame11(
-                            iconData: Icons.ac_unit,
-                            text1: "NE wind",
-                            text2: "3",
-                            text3: "km/h",
-                          ),
-                        ],
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -171,20 +180,10 @@ class HomeScreen extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16.5),
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TextWidget(
-                            text: "Rooms",
-                            size: 18,
-                            weight: FontWeight.w600,
-                            color: Colors.black),
-                        TextWidget(
-                            text: 'See All',
-                            size: 16,
-                            weight: FontWeight.w600,
-                            color: hexToColor(mains2))
-                      ],
+                    SeeAll(
+                      text1: 'Rooms',
+                      text2: 'See All',
+                      text3: '',
                     ),
                     const SizedBox(
                       height: 8,

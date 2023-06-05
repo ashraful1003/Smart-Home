@@ -42,7 +42,7 @@ class ModeCard extends StatelessWidget {
               ImageWidget(image: 'assets/icon_off.png', width: 55, height: 24),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 6,
           ),
           Row(
@@ -52,7 +52,7 @@ class ModeCard extends StatelessWidget {
                 children: [
                   ImageWidget(
                       image: 'assets/img_24.png', width: 40, height: 40),
-                  SizedBox(width: 16,),
+                  const SizedBox(width: 16,),
                   Time(
                     text1: 'from',
                     text2: '8 pm',
@@ -66,14 +66,14 @@ class ModeCard extends StatelessWidget {
                     text1: 'to',
                     text2: '8 pm',
                   ),
-                  SizedBox(width: 16,),
+                  const SizedBox(width: 16,),
                   Container(width: 2, height: 50, color: Colors.black,),
-                  SizedBox(width: 16,),
+                  const SizedBox(width: 16,),
                   Column(
                     children: [
-                      GestureDetector(onTap: () {}, child: Icon(Icons.delete)),
+                      GestureDetector(onTap: () {}, child: const Icon(Icons.delete)),
                       GestureDetector(
-                          onTap: () {}, child: Icon(Icons.note_alt_outlined)),
+                          onTap: () {}, child: const Icon(Icons.note_alt_outlined)),
                     ],
                   ),
                 ],

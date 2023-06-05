@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/views/device_active/device_active_screen.dart';
 import 'package:smart_home/views/home/home_screen.dart';
 import 'package:smart_home/views/landing_screen.dart';
 import 'package:smart_home/views/see_all_detail_room/see_all_detail_room_screen.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SmartModeScreen(),
+      home: SeeAllDetailRoomScreen(),
     );
   }
 }
