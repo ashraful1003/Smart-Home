@@ -5,10 +5,25 @@ import 'package:smart_home/views/common_widget/frame38.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
 import 'package:smart_home/views/smart_mode/mode_card.dart';
 
-class SmartModeScreen extends StatelessWidget {
+class SmartModeScreen extends StatefulWidget {
   SmartModeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<SmartModeScreen> createState() => _SmartModeScreenState();
+}
+
+class _SmartModeScreenState extends State<SmartModeScreen> {
   TextEditingController controller = TextEditingController();
+
+  String dropdownvalue = 'Living Room';
+
+  var items = [
+    'Living Room',
+    'Dining Room',
+    'Smart Mode',
+    'Room',
+    'Kitchen',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +59,36 @@ class SmartModeScreen extends StatelessWidget {
               children: [
                 Container(
                   color: hexToColor(mains2),
-                  child: TextField(
-                    controller: controller,
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    margin: EdgeInsets.symmetric(horizontal: 16,vertical: 12),
+                    decoration: BoxDecoration(
+                      color: hexToColor(roombg),
+                      borderRadius: BorderRadius.circular(16)
+                    ),
+                    child: DropdownButton(
+                      value: dropdownvalue,
+                      dropdownColor: hexToColor(roombg),
+                      isExpanded: true,
+                      style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600),
+                      underline: SizedBox(),
+                      icon: Icon(Icons.keyboard_arrow_down, color: hexToColor(mains2),),
+                      iconSize: 30,
+                      items: items.map((String items) {
+                        return DropdownMenuItem(
+                          value: items,
+                          child: Text(items),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        setState(() {
+                          dropdownvalue = newValue!;
+                        });
+                      },
+                    ),
                   ),
                 ),
                 const SizedBox(
