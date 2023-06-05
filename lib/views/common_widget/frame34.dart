@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/constants.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
 
 class Frame34 extends StatelessWidget {
@@ -14,23 +15,22 @@ class Frame34 extends StatelessWidget {
       child: Row(
         children: [
           TextWidget(
-            text: text1,
-            size: 14,
-            weight: FontWeight.w600,
-            color: Colors.white,
-          ),
+              text: text1,
+              size: 18,
+              weight: FontWeight.w600,
+              color: Colors.black),
           Container(
-            height: 18,
-            width: 18,
+            height: 22,
+            width: 22,
             margin: EdgeInsets.only(left: 4),
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: hexToColor(mains2),
               borderRadius: BorderRadius.circular(4),
             ),
             alignment: Alignment.center,
             child: TextWidget(
               text: text2,
-              size: 10,
+              size: 14,
               weight: FontWeight.w600,
               color: Colors.white,
             ),
