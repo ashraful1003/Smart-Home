@@ -16,11 +16,11 @@ class DeviceActiveScreen extends StatelessWidget {
           children: [
             IconButton(
                 onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
-            TextWidget(text: 'Back', size: 12, weight: FontWeight.w400),
+            TextWidget(text: 'Back', size: 12, weight: FontWeight.w400, color: Colors.white,),
           ],
         ),
         title: TextWidget(
-            text: 'Devices Active', size: 18, weight: FontWeight.w600),
+            text: 'Devices Active', size: 18, weight: FontWeight.w600, color: Colors.white,),
         centerTitle: true,
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.ac_unit)),

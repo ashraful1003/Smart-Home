@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/constants.dart';
 
 class TextWidget extends StatelessWidget {
   TextWidget({
@@ -6,17 +7,19 @@ class TextWidget extends StatelessWidget {
     required this.text,
     required this.size,
     required this.weight,
+    required this.color,
   }) : super(key: key);
 
   String text;
   double size;
   FontWeight weight;
+  Color color;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: TextStyle(fontSize: size, fontWeight: weight),
+      style: TextStyle(fontSize: size, fontWeight: weight, color: color),
     );
   }
 }

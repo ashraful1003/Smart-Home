@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/constants.dart';
 
 import '../common_widget/text_widget.dart';
 
@@ -18,55 +19,61 @@ class Frame41 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: (MediaQuery.of(context).size.width - 55) / 2,
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
-        color: Colors.grey,
+        color: hexToColor(roombg),
       ),
       child: Column(
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                width: 30,
-                height: 18,
+                width: 45,
+                height: 20,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    color: Colors.grey.shade600),
+                    borderRadius: BorderRadius.circular(6),
+                    color: hexToColor(mains2)),
                 child: Stack(
                   alignment: Alignment.topRight,
                   children: [
                     Positioned(
-                      left: 5,
+                      left: 12,
                       child: TextWidget(
-                          text: text1, size: 12, weight: FontWeight.w600),
+                          text: text1,
+                          size: 14,
+                          weight: FontWeight.w600,
+                          color: Colors.white),
                     ),
                     Positioned(
                       top: 2,
-                      left: 18,
+                      left: 28,
                       child: Container(
                         height: 4,
                         width: 4,
                         decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black, width: 3),
+                          border: Border.all(color: Colors.white, width: 3),
                           borderRadius: BorderRadius.circular(50),
                         ),
                       ),
                     ),
                     Positioned(
-                        right: 3,
+                        left: 30,
                         bottom: 1,
                         child: TextWidget(
-                            text: 'c', size: 8, weight: FontWeight.w400)),
+                            text: 'c',
+                            size: 12,
+                            weight: FontWeight.w400,
+                            color: Colors.white)),
                   ],
                 ),
               ),
             ],
           ),
           Container(
-            width: 50,
-            height: 50,
+            width: 100,
+            height: 100,
             child: Image.asset(
               image,
               fit: BoxFit.fill,
@@ -75,18 +82,32 @@ class Frame41 extends StatelessWidget {
           Container(
             child: Column(
               children: [
-                TextWidget(text: text2, size: 12, weight: FontWeight.w600),
+                TextWidget(
+                    text: text2,
+                    size: 18,
+                    weight: FontWeight.w600,
+                    color: Colors.black),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
+                      padding: EdgeInsets.all(4),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(4),
-                        color: Colors.grey.shade700,
+                        color: hexToColor(surface4),
                       ),
                       child: TextWidget(
-                          text: text3, size: 10, weight: FontWeight.w600),
+                          text: text3,
+                          size: 12,
+                          weight: FontWeight.w600,
+                          color: Colors.black),
                     ),
-                    TextWidget(text: text4, size: 10, weight: FontWeight.w400),
+                    SizedBox(width: 3,),
+                    TextWidget(
+                        text: text4,
+                        size: 12,
+                        weight: FontWeight.w400,
+                        color: Colors.black),
                   ],
                 ),
               ],

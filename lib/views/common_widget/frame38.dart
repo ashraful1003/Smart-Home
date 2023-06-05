@@ -19,7 +19,7 @@ class Frame38 extends StatelessWidget {
       child: TextWidget(
           text: text,
           size: 14,
-          weight: FontWeight.w600),
+          weight: FontWeight.w600, color: Colors.white,),
     );
   }
 }

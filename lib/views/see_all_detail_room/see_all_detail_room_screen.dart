@@ -14,14 +14,25 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
         leading: Row(
           children: [
             IconButton(
-                onPressed: () {}, icon: const Icon(Icons.arrow_back_ios)),
-            TextWidget(text: 'Back', size: 12, weight: FontWeight.w400),
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_back_ios, color: Colors.white)),
+            TextWidget(
+                text: 'Back',
+                size: 12,
+                weight: FontWeight.w400,
+                color: Colors.white),
           ],
         ),
-        title: TextWidget(text: 'Room', size: 18, weight: FontWeight.w600),
+        title: TextWidget(
+            text: 'Room',
+            size: 18,
+            weight: FontWeight.w600,
+            color: Colors.white),
         centerTitle: true,
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.ac_unit)),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search, color: Colors.white)),
         ],
       ),
       body: Column(

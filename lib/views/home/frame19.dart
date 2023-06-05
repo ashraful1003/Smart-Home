@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
 
 class Frame19 extends StatelessWidget {
@@ -27,11 +28,26 @@ class Frame19 extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                TextWidget(text: text1, size: 20, weight: FontWeight.w600),
-                TextWidget(text: text2, size: 12, weight: FontWeight.w400),
+                TextWidget(
+                  text: text1,
+                  size: 20,
+                  weight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+                TextWidget(
+                  text: text2,
+                  size: 12,
+                  weight: FontWeight.w400,
+                  color: Colors.white,
+                ),
               ],
             ),
-            TextWidget(text: text3, size: 8, weight: FontWeight.w400),
+            TextWidget(
+              text: text3,
+              size: 8,
+              weight: FontWeight.w400,
+              color: Colors.white,
+            ),
           ],
         ),
       ],

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
 
 class Frame34 extends StatelessWidget {
-  Frame34({Key? key, required this.text1, required this.text2}) : super(key: key);
+  Frame34({Key? key, required this.text1, required this.text2})
+      : super(key: key);
 
   String text1, text2;
 
@@ -13,9 +14,11 @@ class Frame34 extends StatelessWidget {
       child: Row(
         children: [
           TextWidget(
-              text: text1,
-              size: 14,
-              weight: FontWeight.w600),
+            text: text1,
+            size: 14,
+            weight: FontWeight.w600,
+            color: Colors.white,
+          ),
           Container(
             height: 18,
             width: 18,
@@ -26,7 +29,11 @@ class Frame34 extends StatelessWidget {
             ),
             alignment: Alignment.center,
             child: TextWidget(
-                text: text2, size: 10, weight: FontWeight.w600),
+              text: text2,
+              size: 10,
+              weight: FontWeight.w600,
+              color: Colors.white,
+            ),
           ),
         ],
       ),

@@ -19,18 +19,44 @@ class Frame11 extends StatelessWidget {
       width: (MediaQuery.of(context).size.width - 93) / 3,
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
       decoration: BoxDecoration(
-          color: Colors.grey, borderRadius: BorderRadius.circular(4)),
+          color: Colors.white.withOpacity(0.3), borderRadius: BorderRadius.circular(8)),
       child: Column(
         children: [
-          Icon(iconData),
-          TextWidget(text: text1, size: 8, weight: FontWeight.w400),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              TextWidget(text: text2, size: 12, weight: FontWeight.w600),
-              TextWidget(text: text3, size: 8, weight: FontWeight.w600),
+              Container(
+                padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.white
+                  ),
+                  child: Icon(iconData)),
+              const SizedBox(width: 4,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextWidget(
+                    text: text2,
+                    size: 18,
+                    weight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                  TextWidget(
+                    text: text3,
+                    size: 12,
+                    weight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
             ],
+          ),
+          TextWidget(
+            text: text1,
+            size: 12,
+            weight: FontWeight.w400,
+            color: Colors.black,
           ),
         ],
       ),

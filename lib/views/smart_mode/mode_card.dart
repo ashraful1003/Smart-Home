@@ -23,9 +23,9 @@ class ModeCard extends StatelessWidget {
               Column(
                 children: [
                   TextWidget(
-                      text: 'Smart Lamp', size: 14, weight: FontWeight.w600),
+                      text: 'Smart Lamp', size: 14, weight: FontWeight.w600, color: Colors.black,),
                   TextWidget(
-                      text: 'dining room', size: 10, weight: FontWeight.w400),
+                      text: 'dining room', size: 10, weight: FontWeight.w400, color: Colors.black,),
                 ],
               ),
             ],

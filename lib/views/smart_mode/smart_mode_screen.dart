@@ -21,7 +21,7 @@ class SmartModeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextWidget(
-                      text: 'Smart Mode', size: 18, weight: FontWeight.w600),
+                      text: 'Smart Mode', size: 18, weight: FontWeight.w600, color: Colors.black,),
                   IconButton(onPressed: () {}, icon: Icon(Icons.ac_unit))
                 ],
               ),
