@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/views/detail_item/detail_item_sceen.dart';
 import 'package:smart_home/views/device_active/device_active_screen.dart';
 import 'package:smart_home/views/home/home_screen.dart';
 import 'package:smart_home/views/landing_screen.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: UsageScreen(),
+      home: DetailItemScreen(),
     );
   }
 }
