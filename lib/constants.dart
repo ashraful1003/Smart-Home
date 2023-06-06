@@ -14,6 +14,7 @@ String text = '#404040';
 String button = '#9A7265';
 String roombg = '#D8E4E8';
 String surface4 = '#FFE266';
+String text2 = '#878787';
 
 Color hexToColor(String hexString, {String alphaChannel = 'FF'}) {
   return Color(int.parse(hexString.replaceFirst('#', '0x$alphaChannel')));

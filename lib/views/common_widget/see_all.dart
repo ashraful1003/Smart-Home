@@ -27,19 +27,22 @@ class SeeAll extends StatelessWidget {
                 size: 18,
                 weight: FontWeight.w600,
                 color: Colors.black),
-            Container(
-              height: 21,
-              width: 21,
-              margin: EdgeInsets.only(left: 8),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4),
-                  color: hexToColor(mains2)),
-              alignment: Alignment.center,
-              child: TextWidget(
-                  text: text3,
-                  size: 14,
-                  weight: FontWeight.w600,
-                  color: Colors.white),
+            Visibility(
+              visible: text3 == '' ? false : true,
+              child: Container(
+                height: 21,
+                width: 21,
+                margin: EdgeInsets.only(left: 8),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(4),
+                    color: hexToColor(mains2)),
+                alignment: Alignment.center,
+                child: TextWidget(
+                    text: text3,
+                    size: 14,
+                    weight: FontWeight.w600,
+                    color: Colors.white),
+              ),
             ),
           ],
         ),
