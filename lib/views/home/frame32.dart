@@ -39,6 +39,7 @@ class Frame32 extends StatelessWidget {
                 ),
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   TextWidget(
                     text: text1,

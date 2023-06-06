@@ -49,18 +49,27 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 child: SeeAll(text1: 'Your Rooms', text2: 'icon', text3: '10')),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
               child: GridView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                  physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: 8,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2, mainAxisExtent: 200,mainAxisSpacing: 14, crossAxisSpacing: 16),
+                      crossAxisCount: 2,
+                      mainAxisExtent: 200,
+                      mainAxisSpacing: 14,
+                      crossAxisSpacing: 16),
                   itemBuilder: (context, index) {
-                    return Frame41(image: 'assets/img_2.png', text1: '19', text2: 'Living Room', text3: '5', text4: 'devices');
+                    return Frame41(
+                        image: 'assets/img_2.png',
+                        text1: '19',
+                        text2: 'Living Room',
+                        text3: '5',
+                        text4: 'devices');
                   }),
             )
           ],
