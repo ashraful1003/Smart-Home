@@ -49,19 +49,30 @@ class DeviceActiveScreen extends StatelessWidget {
                 child: Icon(Icons.search, color: hexToColor(mains2))),
           ),
         ],
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35))),
       ),
-      body: Column(
-        children: [
-          Container(
-              margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-              child: SeeAll(
-                text1: 'Device Active',
-                text2: 'icon',
-                text3: '6',
-                color: hexToColor(button),
-              )),
-          Frame38(text: 'Turn Off All Devices'),
-        ],
+      body: Container(
+        color: hexToColor(mains2),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(topRight: Radius.circular(35)),
+          ),
+          child: Column(
+            children: [
+              Container(
+                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  child: SeeAll(
+                    text1: 'Device Active',
+                    text2: 'icon',
+                    text3: '6',
+                    color: hexToColor(button),
+                  )),
+              Frame38(text: 'Turn Off All Devices'),
+            ],
+          ),
+        ),
       ),
     );
   }
