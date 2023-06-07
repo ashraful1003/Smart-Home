@@ -37,33 +37,47 @@ class DetailItemScreen extends StatelessWidget {
             weight: FontWeight.w600,
             color: Colors.white),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          color: hexToColor(mains2),
-        ),
-        child: Container(
-          decoration: BoxDecoration(
+      body: Column(
+        children: [
+          Container(
             color: hexToColor(roombg),
-            borderRadius: BorderRadius.only(topRight: Radius.circular(35)),
-          ),
-          child: Column(
-            children: [
-              Container(
-                  margin:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                  child: SeeAll(text1: 'Schedule', text2: 'icon', text3: '4')),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 18),
-                child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: 4,
-                    itemBuilder: (context, index) {
-                      return ModeCard();
-                    }),
+            child: Container(
+              height: 30,
+              decoration: BoxDecoration(
+                color: hexToColor(mains2),
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35)),
               ),
-            ],
+            ),
           ),
-        ),
+          Container(
+            decoration: BoxDecoration(
+              color: hexToColor(mains2),
+            ),
+            child: Container(
+              decoration: BoxDecoration(
+                color: hexToColor(roombg),
+                borderRadius: BorderRadius.only(topRight: Radius.circular(35)),
+              ),
+              child: Column(
+                children: [
+                  Container(
+                      margin:
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                      child: SeeAll(text1: 'Schedule', text2: 'icon', text3: '4')),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 18),
+                    child: ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: 4,
+                        itemBuilder: (context, index) {
+                          return ModeCard();
+                        }),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

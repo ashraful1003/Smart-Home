@@ -35,33 +35,67 @@ class UsageScreen extends StatelessWidget {
         ],
       ),
       body: Container(
-        decoration: BoxDecoration(
-          color: hexToColor(mains2),
-        ),
-        child: Container(
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(topRight: Radius.circular(35)),
-          ),
-          child: Column(
-            children: [
-              Container(
-                  margin:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                  child: SeeAll(
-                    text1: 'Total Today',
-                    text2: 'See All',
-                    text3: '4',
-                    color: hexToColor(mains2),
-                  )),
-              ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: 4,
-                  itemBuilder: (context, index) {
-                    return UsageCard();
-                  }),
-            ],
-          ),
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: hexToColor(mains2),
+                borderRadius:
+                    BorderRadius.only(bottomLeft: Radius.circular(35)),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextWidget(
+                          text: 'Usage this Week',
+                          size: 14,
+                          weight: FontWeight.w600,
+                          color: hexToColor(roombg)),
+                      TextWidget(
+                          text: '2500 watt',
+                          size: 16,
+                          weight: FontWeight.w600,
+                          color: hexToColor(roombg)),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                color: hexToColor(mains2),
+              ),
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius:
+                      BorderRadius.only(topRight: Radius.circular(35)),
+                ),
+                child: Column(
+                  children: [
+                    Container(
+                        margin: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 16),
+                        child: SeeAll(
+                          text1: 'Total Today',
+                          text2: 'See All',
+                          text3: '4',
+                          color: hexToColor(mains2),
+                        )),
+                    ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: 4,
+                        itemBuilder: (context, index) {
+                          return UsageCard();
+                        }),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

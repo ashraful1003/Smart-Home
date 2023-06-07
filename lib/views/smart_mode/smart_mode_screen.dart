@@ -58,10 +58,13 @@ class _SmartModeScreenState extends State<SmartModeScreen> {
             child: Column(
               children: [
                 Container(
-                  color: hexToColor(mains2),
+                  decoration: BoxDecoration(
+                    color: hexToColor(mains2),
+                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35))
+                  ),
                   child: Container(
                     padding: EdgeInsets.symmetric(horizontal: 16),
-                    margin: EdgeInsets.symmetric(horizontal: 16,vertical: 12),
+                    margin: EdgeInsets.symmetric(horizontal: 16,vertical: 15),
                     decoration: BoxDecoration(
                       color: hexToColor(roombg),
                       borderRadius: BorderRadius.circular(16)
@@ -91,21 +94,34 @@ class _SmartModeScreenState extends State<SmartModeScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 28,
-                ),
-                Frame34(text1: 'Your Smart Mode', text2: '10'),
                 Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 18),
-                  child: ListView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 5,
-                      itemBuilder: (context, index) {
-                        return ModeCard();
-                      }),
+                  color: hexToColor(mains2),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: hexToColor(roombg),
+                      borderRadius: BorderRadius.only(topRight: Radius.circular(35))
+                    ),
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 28,
+                        ),
+                        Frame34(text1: 'Your Smart Mode', text2: '10'),
+                        Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 18),
+                          child: ListView.builder(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemCount: 5,
+                              itemBuilder: (context, index) {
+                                return ModeCard();
+                              }),
+                        ),
+                        Frame38(text: 'Add New Smart Mode'),
+                      ],
+                    ),
+                  ),
                 ),
-                Frame38(text: 'Add New Smart Mode'),
               ],
             ),
           ),

@@ -10,11 +10,11 @@ String backgroundCard = '#F7F7F7';
 String backgroundApplication = '#EDEDED';
 String buttonDisable = '#CDCDCD';
 String textDisable = '#999999';
-String text = '#404040';
+String texts = '#404040';
 String button = '#9A7265';
 String roombg = '#D8E4E8';
 String surface4 = '#FFE266';
-String text2 = '#878787';
+String texts2 = '#878787';
 
 Color hexToColor(String hexString, {String alphaChannel = 'FF'}) {
   return Color(int.parse(hexString.replaceFirst('#', '0x$alphaChannel')));

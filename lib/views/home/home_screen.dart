@@ -173,36 +173,45 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16.5),
-                child: Column(
-                  children: [
-                    SeeAll(
-                      text1: 'Rooms',
-                      text2: 'See All',
-                      text3: '',
-                    ),
-                    const SizedBox(
-                      height: 8,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                color: hexToColor(mains2),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(topRight: Radius.circular(35)),
+                  ),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16.5),
+                    child: Column(
                       children: [
-                        Frame41(
-                            image: 'assets/img_2.png',
-                            text1: '19',
-                            text2: 'Living Room',
-                            text3: '5',
-                            text4: 'devices'),
-                        Frame41(
-                            image: 'assets/img_3.png',
-                            text1: '12',
-                            text2: 'Bedroom',
-                            text3: '8',
-                            text4: 'devices'),
+                        SeeAll(
+                          text1: 'Rooms',
+                          text2: 'See All',
+                          text3: '',
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Frame41(
+                                image: 'assets/img_2.png',
+                                text1: '19',
+                                text2: 'Living Room',
+                                text3: '5',
+                                text4: 'devices'),
+                            Frame41(
+                                image: 'assets/img_3.png',
+                                text1: '12',
+                                text2: 'Bedroom',
+                                text3: '8',
+                                text4: 'devices'),
+                          ],
+                        ),
                       ],
                     ),
-                  ],
+                  ),
                 ),
               ),
               Container(
