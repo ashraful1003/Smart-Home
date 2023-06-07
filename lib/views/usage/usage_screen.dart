@@ -28,7 +28,7 @@ class UsageScreen extends StatelessWidget {
               child: IconButton(
                 onPressed: () {},
                 icon: Icon(
-                  Icons.filter,
+                  Icons.tune,
                   color: hexToColor(mains2),
                 ),
               )),

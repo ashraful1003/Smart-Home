@@ -45,7 +45,7 @@ class _SmartModeScreenState extends State<SmartModeScreen> {
               child: IconButton(
                 onPressed: () {},
                 icon: Icon(
-                  Icons.filter,
+                  Icons.tune,
                   color: hexToColor(mains2),
                 ),
               )),

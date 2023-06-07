@@ -3,6 +3,7 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:smart_home/constants.dart';
 import 'package:smart_home/views/home/home_screen.dart';
 import 'package:smart_home/views/smart_mode/smart_mode_screen.dart';
+import 'package:smart_home/views/usage/usage_screen.dart';
 
 class LandingScreen extends StatefulWidget {
   const LandingScreen({Key? key}) : super(key: key);
@@ -12,19 +13,18 @@ class LandingScreen extends StatefulWidget {
 }
 
 class _LandingScreenState extends State<LandingScreen> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
+  final List<Widget> _widgetOptions = <Widget>[
+    const HomeScreen(),
     SmartModeScreen(),
-    Text(
-      'Search',
-      style: optionStyle,
-    ),
-    Text(
-      'Profile',
-      style: optionStyle,
+    const UsageScreen(),
+    const Center(
+      child: Text(
+        'Profile',
+        style: optionStyle,
+      ),
     ),
   ];
 
@@ -59,15 +59,15 @@ class _LandingScreenState extends State<LandingScreen> {
                   text: 'Home',
                 ),
                 GButton(
-                  icon: Icons.home,
+                  icon: Icons.webhook,
                   text: 'Smart',
                 ),
                 GButton(
-                  icon: Icons.search,
+                  icon: Icons.pie_chart,
                   text: 'Usage',
                 ),
                 GButton(
-                  icon: Icons.home,
+                  icon: Icons.person,
                   text: 'Profile',
                 ),
               ],

@@ -58,7 +58,7 @@ class DetailRoomScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(vertical: 18),
+                    padding: EdgeInsets.symmetric(vertical: 18, horizontal: 10),
                     decoration: BoxDecoration(
                         color: hexToColor(roombg),
                         borderRadius: BorderRadius.circular(15)),
