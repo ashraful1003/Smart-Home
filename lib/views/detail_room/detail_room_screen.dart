@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/views/common_widget/frame37.dart';
 import 'package:smart_home/views/detail_room/room_card.dart';
 
 import '../../constants.dart';
@@ -163,7 +164,7 @@ class DetailRoomScreen extends StatelessWidget {
                         },
                       ),
                     ),
-                    Frame38(text: 'Turn Off All Devices'),
+                    Frame37(text: 'Turn Off All Devices'),
                   ],
                 ),
               ),

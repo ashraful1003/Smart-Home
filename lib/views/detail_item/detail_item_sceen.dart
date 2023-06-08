@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/views/common_widget/image_widget.dart';
+import 'package:smart_home/views/detail_item/slider_card.dart';
 import 'package:smart_home/views/detail_item/usages.dart';
 
 import '../../constants.dart';
@@ -9,6 +11,7 @@ import '../smart_mode/mode_card.dart';
 class DetailItemScreen extends StatelessWidget {
   const DetailItemScreen({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,13 +19,16 @@ class DetailItemScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width,
               color: hexToColor(roombg),
               child: Container(
                 decoration: BoxDecoration(
                   color: hexToColor(mains2),
                   borderRadius:
-                      BorderRadius.only(bottomLeft: Radius.circular(35)),
+                  BorderRadius.only(bottomLeft: Radius.circular(35)),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +60,10 @@ class DetailItemScreen extends StatelessWidget {
                                   ),
                                   Container(
                                     width:
-                                        MediaQuery.of(context).size.width - 150,
+                                    MediaQuery
+                                        .of(context)
+                                        .size
+                                        .width - 150,
                                     alignment: Alignment.center,
                                     child: TextWidget(
                                         text: 'Lamp',
@@ -69,11 +78,11 @@ class DetailItemScreen extends StatelessWidget {
                                 padding: EdgeInsets.only(left: 17, top: 10),
                                 child: Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    CrossAxisAlignment.start,
                                     children: [
                                       Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           TextWidget(
                                               text: 'Dining Room',
@@ -91,11 +100,11 @@ class DetailItemScreen extends StatelessWidget {
                                       ),
                                       Column(
                                           crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                           children: [
                                             Row(
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.center,
+                                              CrossAxisAlignment.center,
                                               children: [
                                                 TextWidget(
                                                     text: '80',
@@ -127,72 +136,92 @@ class DetailItemScreen extends StatelessWidget {
                               ))),
                     ]),
                     Container(
-                      margin: EdgeInsets.only(left: 18, right: 18, bottom: 18),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          TextWidget(
-                              text: 'Insensity',
-                              size: 14,
-                              weight: FontWeight.w600,
-                              color: Colors.white),
-                          Divider(
-                            thickness: 2,
-                            color: hexToColor(roombg),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          TextWidget(
-                              text: 'Usages',
-                              size: 14,
-                              weight: FontWeight.w600,
-                              color: Colors.white),
-                          Usages(title: 'Use Today', unit: '50 watt'),
-                          Usages(title: 'Use Week', unit: '500 kwh'),
-                          Usages(title: 'Use Month', unit: '5000 kwh'),
-                        ],
-                      ),
-                    ),
+                        margin: EdgeInsets.only(
+                            left: 18, right: 18, bottom: 18),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                            TextWidget(
+                            text: 'Insensity',
+                            size: 14,
+                            weight: FontWeight.w600,
+                            color: Colors.white),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        Row(
+                            children: [
+                            ImageWidget(
+                            image: 'assets/light_off.png',
+                            width: 34,
+                            height: 34),
+                        SliderCard(),
+                        ImageWidget(
+                        image: 'assets/light_on.png',
+                        width: 42,
+                        height: 42),
                   ],
                 ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: hexToColor(mains2),
-              ),
-              child: Container(
-                decoration: BoxDecoration(
+                SizedBox(
+                  height: 20,
+                ),
+                Divider(
+                  thickness: 2,
                   color: hexToColor(roombg),
-                  borderRadius:
-                      BorderRadius.only(topRight: Radius.circular(35)),
                 ),
-                child: Column(
-                  children: [
-                    Container(
-                        margin:
-                            const EdgeInsets.only(left: 16, right: 16, top: 16),
-                        child: SeeAll(
-                            text1: 'Schedule', text2: 'icon', text3: '4')),
-                    Container(
-                      margin: const EdgeInsets.only(
-                          left: 18, right: 18, bottom: 18),
-                      child: ListView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          itemCount: 4,
-                          itemBuilder: (context, index) {
-                            return ModeCard();
-                          }),
-                    ),
-                  ],
+                SizedBox(
+                  height: 20,
                 ),
+                TextWidget(
+                    text: 'Usages',
+                    size: 14,
+                    weight: FontWeight.w600,
+                    color: Colors.white),
+                Usages(title: 'Use Today', unit: '50 watt'),
+                Usages(title: 'Use Week', unit: '500 kwh'),
+                Usages(title: 'Use Month', unit: '5000 kwh'),
+                ],
               ),
             ),
           ],
         ),
       ),
+    ),
+    Container(
+    decoration: BoxDecoration(
+    color: hexToColor(mains2),
+    ),
+    child: Container(
+    decoration: BoxDecoration(
+    color: hexToColor(roombg),
+    borderRadius:
+    BorderRadius.only(topRight: Radius.circular(35)),
+    ),
+    child: Column(
+    children: [
+    Container(
+    margin:
+    const EdgeInsets.only(left: 16, right: 16, top: 16),
+    child: SeeAll(
+    text1: 'Schedule', text2: 'icon', text3: '4')),
+    Container(
+    margin: const EdgeInsets.only(
+    left: 18, right: 18, bottom: 18),
+    child: ListView.builder(
+    physics: const NeverScrollableScrollPhysics(),
+    shrinkWrap: true,
+    itemCount: 4,
+    itemBuilder: (context, index) {
+    return ModeCard();
+    }),
+    ),
+    ],
+    ),
+    ),
+    ),
+    ],
+    ),
+    ),
     );
   }
 }

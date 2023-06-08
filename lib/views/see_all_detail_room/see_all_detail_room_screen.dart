@@ -18,7 +18,7 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
         leading: Container(
           margin: EdgeInsets.only(left: 18),
           child: GestureDetector(
-            onTap: (){
+            onTap: () {
               Navigator.pop(context);
             },
             child: Row(

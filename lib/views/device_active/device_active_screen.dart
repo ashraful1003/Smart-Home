@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/constants.dart';
+import 'package:smart_home/views/common_widget/frame37.dart';
 
 import '../common_widget/frame34.dart';
 import '../common_widget/frame38.dart';
 import '../common_widget/see_all.dart';
 import '../common_widget/text_widget.dart';
+import '../home/frame32.dart';
 
 class DeviceActiveScreen extends StatelessWidget {
   const DeviceActiveScreen({Key? key}) : super(key: key);
@@ -18,7 +20,7 @@ class DeviceActiveScreen extends StatelessWidget {
         leading: Container(
           margin: EdgeInsets.only(left: 18),
           child: GestureDetector(
-            onTap: (){
+            onTap: () {
               Navigator.pop(context);
             },
             child: Row(
@@ -55,25 +57,48 @@ class DeviceActiveScreen extends StatelessWidget {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35))),
       ),
-      body: Container(
-        color: hexToColor(mains2),
+      body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.only(topRight: Radius.circular(35)),
-          ),
-          child: Column(
-            children: [
-              Container(
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                  child: SeeAll(
-                    text1: 'Device Active',
-                    text2: 'icon',
-                    text3: '6',
-                    color: hexToColor(button),
-                  )),
-              Frame38(text: 'Turn Off All Devices'),
-            ],
+          color: hexToColor(mains2),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(35)),
+            ),
+            child: Column(
+              children: [
+                Container(
+                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                    child: SeeAll(
+                      text1: 'Device Active',
+                      text2: 'icon',
+                      text3: '6',
+                      color: hexToColor(button),
+                    )),
+                Container(
+                    margin: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    child: GridView.builder(
+                        physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: 8,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 200,
+                                mainAxisSpacing: 14,
+                                crossAxisSpacing: 16),
+                        itemBuilder: (context, index) {
+                          return Frame32(
+                              image: 'assets/img_4.png',
+                              text1: 'Temperature',
+                              text2: '19°C',
+                              text3: 'AC',
+                              text4: 'Living room',
+                              text5: 'ON');
+                        })),
+                Frame37(text: 'Turn Off All Devices'),
+              ],
+            ),
           ),
         ),
       ),
