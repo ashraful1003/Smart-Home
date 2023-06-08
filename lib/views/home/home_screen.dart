@@ -149,19 +149,19 @@ class HomeScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Frame11(
-                            iconData: Icons.ac_unit,
+                            iconData: Icons.hub,
                             text1: "Humadity",
                             text2: "97",
                             text3: "%",
                           ),
                           Frame11(
-                            iconData: Icons.ac_unit,
+                            iconData: Icons.remove_red_eye_sharp,
                             text1: "Visibility",
                             text2: "7",
                             text3: "km",
                           ),
                           Frame11(
-                            iconData: Icons.ac_unit,
+                            iconData: Icons.wind_power,
                             text1: "NE wind",
                             text2: "3",
                             text3: "km/h",

@@ -39,7 +39,7 @@ class ModeCard extends StatelessWidget {
                   ),
                 ],
               ),
-              ImageWidget(image: 'assets/icon_off.png', width: 55, height: 24),
+              ImageWidget(image: 'assets/icon_on.png', width: 55, height: 24),
             ],
           ),
           const SizedBox(

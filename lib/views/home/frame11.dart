@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home/constants.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
 
 class Frame11 extends StatelessWidget {
@@ -26,12 +27,12 @@ class Frame11 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                padding: const EdgeInsets.all(4),
+                padding: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
                     color: Colors.white
                   ),
-                  child: Icon(iconData)),
+                  child: Icon(iconData, color: hexToColor(iconColor),)),
               const SizedBox(width: 4,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
