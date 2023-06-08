@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:smart_home/constants.dart';
 import 'package:smart_home/views/home/home_screen.dart';
 import 'package:smart_home/views/smart_mode/smart_mode_screen.dart';

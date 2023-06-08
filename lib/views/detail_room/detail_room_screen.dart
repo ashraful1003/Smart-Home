@@ -3,10 +3,12 @@ import 'package:smart_home/views/common_widget/frame37.dart';
 import 'package:smart_home/views/detail_room/room_card.dart';
 
 import '../../constants.dart';
+import '../../model/barchart_model.dart';
 import '../common_widget/frame38.dart';
 import '../common_widget/see_all.dart';
 import '../common_widget/text_widget.dart';
 import '../home/frame32.dart';
+import 'bar_chart.dart';
 
 class DetailRoomScreen extends StatelessWidget {
   const DetailRoomScreen({Key? key}) : super(key: key);
@@ -51,13 +53,12 @@ class DetailRoomScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-              decoration: BoxDecoration(
-                  color: hexToColor(mains2),
-                  borderRadius:
-                      BorderRadius.only(bottomLeft: Radius.circular(35))),
-              child: Column(
-                children: [
+                padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                decoration: BoxDecoration(
+                    color: hexToColor(mains2),
+                    borderRadius:
+                        BorderRadius.only(bottomLeft: Radius.circular(35))),
+                child: Column(children: [
                   Container(
                     padding: EdgeInsets.symmetric(vertical: 18, horizontal: 10),
                     decoration: BoxDecoration(
@@ -88,38 +89,33 @@ class DetailRoomScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 16,
-                  ),
+                  const SizedBox(height: 16),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      TextWidget(
-                          text: 'Usage Today',
-                          size: 16,
-                          weight: FontWeight.w600,
-                          color: hexToColor(roombg)),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          TextWidget(
-                              text: '25',
-                              size: 20,
-                              weight: FontWeight.w600,
-                              color: hexToColor(roombg)),
-                          TextWidget(
-                              text: 'watt',
-                              size: 20,
-                              weight: FontWeight.w600,
-                              color: hexToColor(roombg)),
-                        ],
-                      ),
-                    ],
-                  )
-                ],
-              ),
-            ),
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        TextWidget(
+                            text: 'Usage Today',
+                            size: 16,
+                            weight: FontWeight.w600,
+                            color: hexToColor(roombg)),
+                        Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              TextWidget(
+                                  text: '25',
+                                  size: 20,
+                                  weight: FontWeight.w600,
+                                  color: hexToColor(roombg)),
+                              TextWidget(
+                                  text: 'watt',
+                                  size: 20,
+                                  weight: FontWeight.w600,
+                                  color: hexToColor(roombg)),
+                            ]),
+                      ]),
+                  BarChart(points: barchartPoints),
+                ])),
             Container(
               decoration: BoxDecoration(
                 color: hexToColor(mains2),

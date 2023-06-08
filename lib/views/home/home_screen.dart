@@ -26,14 +26,17 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              width: 90,
-                decoration: BoxDecoration(
+                width: 90,
+                decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/cloud.png'), fit: BoxFit.fill))),Container(
-              width: 90,
-                decoration: BoxDecoration(
+                        image: AssetImage('assets/cloud.png'),
+                        fit: BoxFit.fill))),
+            Container(
+                width: 90,
+                decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('assets/cloud2.png'), fit: BoxFit.fill))),
+                        image: AssetImage('assets/cloud2.png'),
+                        fit: BoxFit.fill))),
           ],
         ),
         title: Column(
@@ -41,12 +44,12 @@ class HomeScreen extends StatelessWidget {
           children: [
             TextWidget(
                 text: 'Good Morning,',
-                size: 18,
+                size: 24,
                 weight: FontWeight.w600,
                 color: Colors.white),
             TextWidget(
                 text: 'Kimberly Mastrangelo',
-                size: 16,
+                size: 14,
                 weight: FontWeight.w400,
                 color: Colors.black),
           ],

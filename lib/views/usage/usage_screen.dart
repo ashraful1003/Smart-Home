@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/views/usage/usage_card.dart';
+import 'package:smart_home/views/usage/usage_chart.dart';
 
 import '../../constants.dart';
+import '../../model/barchart_model.dart';
 import '../common_widget/see_all.dart';
 import '../common_widget/text_widget.dart';
+import '../detail_room/bar_chart.dart';
 
 class UsageScreen extends StatelessWidget {
   const UsageScreen({Key? key}) : super(key: key);
@@ -34,7 +37,7 @@ class UsageScreen extends StatelessWidget {
               )),
         ],
       ),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
@@ -61,6 +64,10 @@ class UsageScreen extends StatelessWidget {
                           color: hexToColor(roombg)),
                     ],
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  UsageChart(points: usagechartPoints),
                 ],
               ),
             ),
@@ -87,6 +94,7 @@ class UsageScreen extends StatelessWidget {
                         )),
                     ListView.builder(
                         shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
                         itemCount: 4,
                         itemBuilder: (context, index) {
                           return UsageCard();
