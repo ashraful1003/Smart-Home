@@ -24,15 +24,15 @@ Color hexToColor(String hexString, {String alphaChannel = 'FF'}) {
 }
 
 List<IconData> listOfIcons = [
-  Icons.home_rounded,
-  Icons.favorite_rounded,
-  Icons.settings_rounded,
-  Icons.person_rounded,
+  Icons.home_outlined,
+  Icons.webhook,
+  Icons.pie_chart,
+  Icons.person_outline,
 ];
 
 List<String> listOfStrings = [
   'Home',
-  'Favorite',
-  'Settings',
-  'Account',
+  'Smart',
+  'Usage',
+  'Profile',
 ];

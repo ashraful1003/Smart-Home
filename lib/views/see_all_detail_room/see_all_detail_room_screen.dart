@@ -15,17 +15,23 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: hexToColor(mains2),
         leadingWidth: 80,
-        leading: Row(
-          children: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.arrow_back_ios, color: Colors.white)),
-            TextWidget(
-                text: 'Back',
-                size: 12,
-                weight: FontWeight.w400,
-                color: Colors.white),
-          ],
+        leading: Container(
+          margin: EdgeInsets.only(left: 18),
+          child: GestureDetector(
+            onTap: (){
+              Navigator.pop(context);
+            },
+            child: Row(
+              children: [
+                const Icon(Icons.arrow_back_ios, color: Colors.white),
+                TextWidget(
+                    text: 'Back',
+                    size: 12,
+                    weight: FontWeight.w400,
+                    color: Colors.white),
+              ],
+            ),
+          ),
         ),
         title: TextWidget(
             text: 'Room',

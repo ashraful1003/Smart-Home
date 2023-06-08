@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:smart_home/constants.dart';
 import 'package:smart_home/views/common_widget/see_all.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
+import 'package:smart_home/views/device_active/device_active_screen.dart';
 import 'package:smart_home/views/home/frame11.dart';
 import 'package:smart_home/views/home/frame19.dart';
 import 'package:smart_home/views/home/frame32.dart';
+import 'package:smart_home/views/see_all_detail_room/see_all_detail_room_screen.dart';
 
 import '../common_widget/clipper.dart';
 import 'frame41.dart';
@@ -188,6 +190,7 @@ class HomeScreen extends StatelessWidget {
                           text1: 'Rooms',
                           text2: 'See All',
                           text3: '',
+                          widget: const SeeAllDetailRoomScreen(),
                         ),
                         const SizedBox(
                           height: 8,
@@ -219,38 +222,11 @@ class HomeScreen extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16.5),
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            TextWidget(
-                                text: "Active",
-                                size: 18,
-                                weight: FontWeight.w600,
-                                color: Colors.black),
-                            Container(
-                              height: 18,
-                              width: 18,
-                              margin: EdgeInsets.only(left: 8),
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(4),
-                                  color: hexToColor(mains2)),
-                              alignment: Alignment.center,
-                              child: TextWidget(
-                                  text: "10",
-                                  size: 14,
-                                  weight: FontWeight.w600,
-                                  color: Colors.white),
-                            ),
-                          ],
-                        ),
-                        TextWidget(
-                            text: 'See All',
-                            size: 16,
-                            weight: FontWeight.w600,
-                            color: hexToColor(mains2))
-                      ],
+                    SeeAll(
+                      text1: 'Active',
+                      text2: 'See All',
+                      text3: '10',
+                      widget: const DeviceActiveScreen(),
                     ),
                     SizedBox(
                       height: 8,

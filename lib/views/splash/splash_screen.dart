@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/constants.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
+import 'package:smart_home/views/landing_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -51,7 +52,10 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => const LandingScreen()));
+              },
               child: Container(
                 height: 48,
                 width: MediaQuery.of(context).size.width,
