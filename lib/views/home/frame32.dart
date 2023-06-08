@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home/constants.dart';
+import 'package:smart_home/views/detail_item/detail_item_sceen.dart';
+import 'package:smart_home/views/detail_room/detail_room_screen.dart';
 
 import '../common_widget/text_widget.dart';
 
@@ -18,18 +20,20 @@ class Frame32 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: (MediaQuery.of(context).size.width-45)/2,
-      padding: const EdgeInsets.symmetric(horizontal: 6),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: hexToColor(button),
-      ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const DetailItemScreen()));
+      },
+      child: Container(
+          width: (MediaQuery.of(context).size.width - 45) / 2,
+          padding: const EdgeInsets.symmetric(horizontal: 6),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(4),
+            color: hexToColor(button),
+          ),
+          child: Column(children: [
+            Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
               Container(
                 width: 75,
                 height: 75,
@@ -38,53 +42,50 @@ class Frame32 extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  TextWidget(
-                    text: text1,
-                    size: 12,
-                    weight: FontWeight.w400,
-                    color: Colors.white,
-                  ),
-                  TextWidget(
-                    text: text2,
-                    size: 18,
-                    weight: FontWeight.w600,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 16),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TextWidget(
-                      text: text3,
-                      size: 18,
-                      weight: FontWeight.w600,
-                      color: Colors.white,
-                    ),
-                    TextWidget(
-                      text: text4,
-                      size: 12,
-                      weight: FontWeight.w400,
-                      color: Colors.white,
-                    ),
-                  ],
+              Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                TextWidget(
+                  text: text1,
+                  size: 12,
+                  weight: FontWeight.w400,
+                  color: Colors.white,
                 ),
-                Image.asset('assets/icon_off.png', height: 24, width: 55,),
-              ],
-            ),
-          ),
-        ],
-      ),
+                TextWidget(
+                  text: text2,
+                  size: 18,
+                  weight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+              ]),
+            ]),
+            Container(
+                margin: const EdgeInsets.only(top: 16),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          TextWidget(
+                            text: text3,
+                            size: 18,
+                            weight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                          TextWidget(
+                            text: text4,
+                            size: 12,
+                            weight: FontWeight.w400,
+                            color: Colors.white,
+                          ),
+                        ],
+                      ),
+                      Image.asset(
+                        'assets/icon_off.png',
+                        height: 24,
+                        width: 55,
+                      ),
+                    ])),
+          ])),
     );
   }
 }

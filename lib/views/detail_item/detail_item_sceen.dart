@@ -197,7 +197,7 @@ class DetailItemScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: hexToColor(roombg),
                   borderRadius:
-                      BorderRadius.only(topRight: Radius.circular(35)),
+                      const BorderRadius.only(topRight: Radius.circular(35)),
                 ),
                 child: Column(
                   children: [
@@ -214,7 +214,7 @@ class DetailItemScreen extends StatelessWidget {
                           shrinkWrap: true,
                           itemCount: 4,
                           itemBuilder: (context, index) {
-                            return ModeCard();
+                            return ModeCard(index: index,);
                           }),
                     ),
                   ],

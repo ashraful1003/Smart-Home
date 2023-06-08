@@ -16,7 +16,7 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
         backgroundColor: hexToColor(mains2),
         leadingWidth: 80,
         leading: Container(
-          margin: EdgeInsets.only(left: 18),
+          margin: const EdgeInsets.only(left: 18),
           child: GestureDetector(
             onTap: () {
               Navigator.pop(context);
@@ -41,8 +41,8 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
         centerTitle: true,
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 16),
-            padding: EdgeInsets.all(6),
+            margin: const EdgeInsets.only(right: 16),
+            padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(25)),
             child: GestureDetector(
@@ -50,14 +50,14 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
                 child: Icon(Icons.search, color: hexToColor(mains2))),
           ),
         ],
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35))),
       ),
       body: SingleChildScrollView(
         child: Container(
           color: hexToColor(mains2),
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(topRight: Radius.circular(35)),
             ),
@@ -69,9 +69,9 @@ class SeeAllDetailRoomScreen extends StatelessWidget {
                     child: SeeAll(
                         text1: 'Your Rooms', text2: 'icon', text3: '10')),
                 Container(
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                  margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                   child: GridView.builder(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: 8,
                       gridDelegate:

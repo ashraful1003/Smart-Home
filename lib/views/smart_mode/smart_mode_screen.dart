@@ -106,7 +106,7 @@ class _SmartModeScreenState extends State<SmartModeScreen> {
                         const SizedBox(
                           height: 28,
                         ),
-                        Frame34(text1: 'Your Smart Mode', text2: '10'),
+                        Frame34(text1: 'Smart Mode', text2: '10'),
                         Container(
                           margin: const EdgeInsets.symmetric(horizontal: 18),
                           child: ListView.builder(
@@ -114,7 +114,7 @@ class _SmartModeScreenState extends State<SmartModeScreen> {
                               physics: const NeverScrollableScrollPhysics(),
                               itemCount: 5,
                               itemBuilder: (context, index) {
-                                return ModeCard();
+                                return ModeCard(index: index,);
                               }),
                         ),
                         Frame38(text: 'Add New Smart Mode'),

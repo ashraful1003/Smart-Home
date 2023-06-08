@@ -139,12 +139,12 @@ class DetailRoomScreen extends StatelessWidget {
                         )),
                     Container(
                       margin:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                       child: GridView.builder(
                         physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: 6,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             mainAxisExtent: 200,
                             mainAxisSpacing: 14,
