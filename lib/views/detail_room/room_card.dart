@@ -18,41 +18,31 @@ class RoomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Icon(
-            icon,
-            size: 40,
-            color: hexToColor(mains2),
-          ),
-          SizedBox(width: 5,),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  TextWidget(
-                      text: text1,
-                      size: 18,
-                      weight: FontWeight.w600,
-                      color: hexToColor(mains2)),
-                  TextWidget(
-                      text: text2,
-                      size: 14,
-                      weight: FontWeight.w600,
-                      color: hexToColor(mains2)),
-                ],
-              ),
-              TextWidget(
-                  text: text3,
-                  size: 12,
-                  weight: FontWeight.w400,
-                  color: hexToColor(mains2)),
-            ],
-          ),
-        ],
+        child:
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+      Icon(icon, size: 40, color: hexToColor(mains2)),
+      const SizedBox(
+        width: 5,
       ),
-    );
+      Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(children: [
+          TextWidget(
+              text: text1,
+              size: 18,
+              weight: FontWeight.w600,
+              color: hexToColor(mains2)),
+          TextWidget(
+              text: text2,
+              size: 14,
+              weight: FontWeight.w600,
+              color: hexToColor(mains2)),
+        ]),
+        TextWidget(
+            text: text3,
+            size: 12,
+            weight: FontWeight.w400,
+            color: hexToColor(mains2)),
+      ]),
+    ]));
   }
 }

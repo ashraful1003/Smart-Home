@@ -69,7 +69,7 @@ class UsageChart extends StatelessWidget {
               break;
           }
 
-          return Text(text, style: TextStyle(color: Colors.white));
+          return Text(text, style: const TextStyle(color: Colors.white));
         },
       );
 
@@ -99,7 +99,7 @@ class UsageChart extends StatelessWidget {
           }
 
           return Text(text,
-              style: TextStyle(color: Colors.white, fontSize: 12));
+              style: const TextStyle(color: Colors.white, fontSize: 12));
         },
       );
 
@@ -108,7 +108,7 @@ class UsageChart extends StatelessWidget {
         getTitlesWidget: (value, meta) {
           String text = '';
           return Text(text,
-              style: TextStyle(color: Colors.white, fontSize: 12));
+              style: const TextStyle(color: Colors.white, fontSize: 12));
         },
       );
 }

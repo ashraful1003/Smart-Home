@@ -6,7 +6,6 @@ import '../../constants.dart';
 import '../../model/barchart_model.dart';
 import '../common_widget/see_all.dart';
 import '../common_widget/text_widget.dart';
-import '../detail_room/bar_chart.dart';
 
 class UsageScreen extends StatelessWidget {
   const UsageScreen({Key? key}) : super(key: key);
@@ -23,7 +22,7 @@ class UsageScreen extends StatelessWidget {
             color: Colors.white),
         actions: [
           Container(
-              margin: EdgeInsets.only(right: 16),
+              margin: const EdgeInsets.only(right: 16),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(25),
@@ -45,7 +44,7 @@ class UsageScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: hexToColor(mains2),
                 borderRadius:
-                    BorderRadius.only(bottomLeft: Radius.circular(35)),
+                    const BorderRadius.only(bottomLeft: Radius.circular(35)),
               ),
               child: Column(
                 children: [
@@ -64,7 +63,7 @@ class UsageScreen extends StatelessWidget {
                           color: hexToColor(roombg)),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   UsageChart(points: usagechartPoints),
@@ -94,10 +93,10 @@ class UsageScreen extends StatelessWidget {
                         )),
                     ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         itemCount: 4,
                         itemBuilder: (context, index) {
-                          return UsageCard();
+                          return const UsageCard();
                         }),
                   ],
                 ),

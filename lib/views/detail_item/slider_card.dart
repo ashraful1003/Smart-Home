@@ -14,28 +14,27 @@ class _SliderCardState extends State<SliderCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width-128,
-      child: SliderTheme(
-          data: SliderTheme.of(context).copyWith(
-            activeTrackColor: Colors.white,
-            inactiveTrackColor: Colors.white,
-            trackShape: const RectangularSliderTrackShape(),
-            trackHeight: 2.0,
-            thumbColor: hexToColor(button),
-            thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 12.0),
-            overlayShape: const RoundSliderOverlayShape(overlayRadius: 2.0),
-          ),
-          child: Slider(
-            label: brightness.abs().toString(),
-            min: 0.0,
-            max: 1.0,
-            value: brightness,
-            onChanged: (double value) {
-              setState(() {
-                brightness = value;
-              });
-            },
-          )),
-    );
+        width: MediaQuery.of(context).size.width - 128,
+        child: SliderTheme(
+            data: SliderTheme.of(context).copyWith(
+                activeTrackColor: Colors.white,
+                inactiveTrackColor: Colors.white,
+                trackShape: const RectangularSliderTrackShape(),
+                trackHeight: 2.0,
+                thumbColor: hexToColor(button),
+                thumbShape:
+                    const RoundSliderThumbShape(enabledThumbRadius: 12.0),
+                overlayShape:
+                    const RoundSliderOverlayShape(overlayRadius: 2.0)),
+            child: Slider(
+                label: brightness.abs().toString(),
+                min: 0.0,
+                max: 1.0,
+                value: brightness,
+                onChanged: (double value) {
+                  setState(() {
+                    brightness = value;
+                  });
+                })));
   }
 }

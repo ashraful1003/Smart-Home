@@ -19,51 +19,44 @@ class Frame41 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const DetailRoomScreen()));
-      },
-      child: Container(
-        width: (MediaQuery.of(context).size.width - 55) / 2,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(4),
-          color: hexToColor(roombg),
-        ),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const DetailRoomScreen()));
+        },
+        child: Container(
+            width: (MediaQuery.of(context).size.width - 55) / 2,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4),
+                color: hexToColor(roombg)),
+            child: Column(children: [
+              Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                 Container(
-                  width: 45,
-                  height: 20,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      color: hexToColor(mains2)),
-                  child: Stack(
-                    alignment: Alignment.topRight,
-                    children: [
+                    width: 45,
+                    height: 20,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(6),
+                        color: hexToColor(mains2)),
+                    child: Stack(alignment: Alignment.topRight, children: [
                       Positioned(
-                        left: 12,
-                        child: TextWidget(
-                            text: text1,
-                            size: 14,
-                            weight: FontWeight.w600,
-                            color: Colors.white),
-                      ),
+                          left: 12,
+                          child: TextWidget(
+                              text: text1,
+                              size: 14,
+                              weight: FontWeight.w600,
+                              color: Colors.white)),
                       Positioned(
-                        top: 2,
-                        left: 28,
-                        child: Container(
-                          height: 4,
-                          width: 4,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white, width: 3),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        ),
-                      ),
+                          top: 2,
+                          left: 28,
+                          child: Container(
+                              height: 4,
+                              width: 4,
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.white, width: 3),
+                                  borderRadius: BorderRadius.circular(50)))),
                       Positioned(
                           left: 30,
                           bottom: 1,
@@ -72,58 +65,40 @@ class Frame41 extends StatelessWidget {
                               size: 12,
                               weight: FontWeight.w400,
                               color: Colors.white)),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              child: Image.asset(
-                image,
-                fit: BoxFit.fill,
-              ),
-            ),
-            Container(
-              child: Column(
-                children: [
-                  TextWidget(
-                      text: text2,
-                      size: 18,
-                      weight: FontWeight.w600,
-                      color: Colors.black),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(4),
-                        decoration: BoxDecoration(
+                    ])),
+              ]),
+              Container(
+                  width: 100,
+                  height: 100,
+                  child: Image.asset(image, fit: BoxFit.fill)),
+              Container(
+                  child: Column(children: [
+                TextWidget(
+                    text: text2,
+                    size: 18,
+                    weight: FontWeight.w600,
+                    color: Colors.black),
+                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Container(
+                      padding: EdgeInsets.all(4),
+                      decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(4),
-                          color: hexToColor(surface4),
-                        ),
-                        child: TextWidget(
-                            text: text3,
-                            size: 12,
-                            weight: FontWeight.w600,
-                            color: Colors.black),
-                      ),
-                      SizedBox(
-                        width: 3,
-                      ),
-                      TextWidget(
-                          text: text4,
+                          color: hexToColor(surface4)),
+                      child: TextWidget(
+                          text: text3,
                           size: 12,
-                          weight: FontWeight.w400,
-                          color: Colors.black),
-                    ],
+                          weight: FontWeight.w600,
+                          color: Colors.black)),
+                  const SizedBox(
+                    width: 3,
                   ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+                  TextWidget(
+                      text: text4,
+                      size: 12,
+                      weight: FontWeight.w400,
+                      color: Colors.black),
+                ]),
+              ])),
+            ])));
   }
 }

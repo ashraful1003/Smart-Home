@@ -11,32 +11,26 @@ class Frame34 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18.0),
-      child: Row(
-        children: [
+        padding: const EdgeInsets.symmetric(horizontal: 18.0),
+        child: Row(children: [
           TextWidget(
               text: text1,
               size: 18,
               weight: FontWeight.w600,
               color: Colors.black),
           Container(
-            height: 22,
-            width: 22,
-            margin: EdgeInsets.only(left: 4),
-            decoration: BoxDecoration(
-              color: hexToColor(mains2),
-              borderRadius: BorderRadius.circular(4),
-            ),
-            alignment: Alignment.center,
-            child: TextWidget(
-              text: text2,
-              size: 14,
-              weight: FontWeight.w600,
-              color: Colors.white,
-            ),
-          ),
-        ],
-      ),
-    );
+              height: 22,
+              width: 22,
+              margin: const EdgeInsets.only(left: 4),
+              decoration: BoxDecoration(
+                  color: hexToColor(mains2),
+                  borderRadius: BorderRadius.circular(4)),
+              alignment: Alignment.center,
+              child: TextWidget(
+                  text: text2,
+                  size: 14,
+                  weight: FontWeight.w600,
+                  color: Colors.white)),
+        ]));
   }
 }

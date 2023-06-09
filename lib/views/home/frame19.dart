@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_home/views/common_widget/text_widget.dart';
 
@@ -15,42 +14,28 @@ class Frame19 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-            width: 50,
-            height: 50,
-            margin: EdgeInsets.only(right: 8),
-            child: Image.asset(image, fit: BoxFit.fill)),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                TextWidget(
-                  text: text1,
-                  size: 20,
-                  weight: FontWeight.w600,
-                  color: Colors.white,
-                ),
-                TextWidget(
-                  text: text2,
-                  size: 12,
-                  weight: FontWeight.w400,
-                  color: Colors.white,
-                ),
-              ],
-            ),
-            TextWidget(
-              text: text3,
-              size: 8,
+    return Row(children: [
+      Container(
+          width: 50,
+          height: 50,
+          margin: const EdgeInsets.only(right: 8),
+          child: Image.asset(image, fit: BoxFit.fill)),
+      Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+          TextWidget(
+              text: text1,
+              size: 20,
+              weight: FontWeight.w600,
+              color: Colors.white),
+          TextWidget(
+              text: text2,
+              size: 12,
               weight: FontWeight.w400,
-              color: Colors.white,
-            ),
-          ],
-        ),
-      ],
-    );
+              color: Colors.white),
+        ]),
+        TextWidget(
+            text: text3, size: 8, weight: FontWeight.w400, color: Colors.white),
+      ]),
+    ]);
   }
 }

@@ -32,7 +32,7 @@ class UsageCard extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Column(

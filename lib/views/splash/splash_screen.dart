@@ -11,9 +11,8 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: hexToColor(mains2),
-      body: Stack(
-        children: [
+        backgroundColor: hexToColor(mains2),
+        body: Stack(children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -27,7 +26,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 24, top: 67, right: 55),
+                margin: const EdgeInsets.only(left: 24, top: 67, right: 55),
                 child: TextWidget(
                   text: "Welcome Home",
                   size: 28,
@@ -36,7 +35,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 24, top: 8, right: 55),
+                margin: const EdgeInsets.only(left: 24, top: 8, right: 55),
                 child: TextWidget(
                   text:
                       "no matter how far you go,home will be your destination to return to. let's make your home comfortable",
@@ -57,60 +56,55 @@ class SplashScreen extends StatelessWidget {
               ),
             ],
           ),
-          Positioned(bottom: 100, left: -20, child: Boxes()),
-          Positioned(bottom: 140, left: 100, child: Boxes()),
+          const Positioned(bottom: 100, left: -20, child: Boxes()),
+          const Positioned(bottom: 140, left: 100, child: Boxes()),
           Positioned(
-            bottom: 130,
-            right: 16,
-            left: 16,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const LandingScreen()));
-              },
-              child: Container(
-                height: 48,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: hexToColor(button),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.shade800,
-                        blurRadius: 3,
-                        spreadRadius: 2,
-                        offset: Offset(3, 3))
-                  ],
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    TextWidget(
-                      text: "Get Started",
-                      size: 16,
-                      weight: FontWeight.w600,
-                      color: Colors.white,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Icon(
-                      Icons.skip_next_outlined,
-                      color: Colors.white,
-                      size: 30,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Positioned(top: -30, right: 100, child: Boxes()),
-          Positioned(top: 110, right: 30, child: Boxes()),
-          Positioned(top: 85, right: 60, child: Boxes()),
-          Positioned(bottom: 15, left: 100, child: Boxes()),
-          Positioned(bottom: -15, left: -40, child: Boxes()),
+              bottom: 130,
+              right: 16,
+              left: 16,
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LandingScreen()));
+                  },
+                  child: Container(
+                      height: 48,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                          color: hexToColor(button),
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.grey.shade800,
+                                blurRadius: 3,
+                                spreadRadius: 2,
+                                offset: const Offset(3, 3))
+                          ],
+                          borderRadius: BorderRadius.circular(8)),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            TextWidget(
+                              text: "Get Started",
+                              size: 16,
+                              weight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            const Icon(
+                              Icons.skip_next_outlined,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ])))),
+          const Positioned(top: -30, right: 100, child: Boxes()),
+          const Positioned(top: 110, right: 30, child: Boxes()),
+          const Positioned(top: 85, right: 60, child: Boxes()),
+          const Positioned(bottom: 15, left: 100, child: Boxes()),
+          const Positioned(bottom: -15, left: -40, child: Boxes()),
           Positioned(
               top: 200, left: -40, child: Circles(height: 80, width: 80)),
           Positioned(
@@ -122,8 +116,6 @@ class SplashScreen extends StatelessWidget {
               top: 320, left: 170, child: Circles(height: 20, width: 20)),
           Positioned(
               top: 450, left: 160, child: Circles(height: 20, width: 20)),
-        ],
-      ),
-    );
+        ]));
   }
 }

@@ -16,7 +16,7 @@ class ImageWidget extends StatelessWidget {
     return Container(
         width: width,
         height: height,
-        margin: EdgeInsets.only(right: 8),
+        margin: const EdgeInsets.only(right: 8),
         child: Image.asset(image, fit: BoxFit.fill));
   }
 }

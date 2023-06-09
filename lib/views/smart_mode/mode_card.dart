@@ -15,40 +15,30 @@ class ModeCard extends StatelessWidget {
         margin: const EdgeInsets.only(top: 8),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-        ),
+            color: Colors.white, borderRadius: BorderRadius.circular(16)),
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      TextWidget(
-                        text: 'Smart Lamp',
-                        size: 14,
-                        weight: FontWeight.w600,
-                        color: Colors.black,
-                      ),
-                      TextWidget(
-                        text: 'dining room | Tue Thu',
-                        size: 12,
-                        weight: FontWeight.w400,
-                        color: Colors.black,
-                      ),
-                    ],
-                  ),
-                  ImageWidget(
-                      image: index % 2 == 0
-                          ? 'assets/icon_on.png'
-                          : 'assets/icon_off.png',
-                      width: 55,
-                      height: 24),
-                ],
-              ),
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  TextWidget(
+                      text: 'Smart Lamp',
+                      size: 14,
+                      weight: FontWeight.w600,
+                      color: Colors.black),
+                  TextWidget(
+                      text: 'dining room | Tue Thu',
+                      size: 12,
+                      weight: FontWeight.w400,
+                      color: Colors.black),
+                ]),
+                ImageWidget(
+                    image: index % 2 == 0
+                        ? 'assets/icon_on.png'
+                        : 'assets/icon_off.png',
+                    width: 55,
+                    height: 24),
+              ]),
               const SizedBox(height: 6),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 Row(children: [

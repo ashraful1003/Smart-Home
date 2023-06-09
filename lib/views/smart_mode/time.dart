@@ -9,20 +9,11 @@ class Time extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        TextWidget(
-            text: text1,
-            size: 12,
-            weight: FontWeight.w400,
-            color: Colors.black),
-        TextWidget(
-            text: text2,
-            size: 14,
-            weight: FontWeight.w600,
-            color: Colors.black),
-      ],
-    );
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      TextWidget(
+          text: text1, size: 12, weight: FontWeight.w400, color: Colors.black),
+      TextWidget(
+          text: text2, size: 14, weight: FontWeight.w600, color: Colors.black)
+    ]);
   }
 }
