@@ -24,7 +24,7 @@ class DetailItemScreen extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: hexToColor(mains2),
                     borderRadius:
-                        BorderRadius.only(bottomLeft: Radius.circular(35))),
+                        const BorderRadius.only(bottomLeft: Radius.circular(35))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -36,7 +36,7 @@ class DetailItemScreen extends StatelessWidget {
                                 child: Row(children: [
                               Row(children: [
                                 Container(
-                                    margin: EdgeInsets.only(left: 18),
+                                    margin: const EdgeInsets.only(left: 18),
                                     child: GestureDetector(
                                         onTap: () {},
                                         child: const Icon(
@@ -60,7 +60,7 @@ class DetailItemScreen extends StatelessWidget {
                                       color: Colors.white)),
                             ])),
                             Container(
-                                padding: EdgeInsets.only(left: 17, top: 10),
+                                padding: const EdgeInsets.only(left: 17, top: 10),
                                 child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -74,7 +74,7 @@ class DetailItemScreen extends StatelessWidget {
                                                 size: 14,
                                                 weight: FontWeight.w400,
                                                 color: Colors.white),
-                                            SizedBox(height: 12,),
+                                            const SizedBox(height: 12,),
                                             Container(
                                                 height: 24,
                                                 child: Image.asset(
@@ -117,7 +117,6 @@ class DetailItemScreen extends StatelessWidget {
                             height: 80,
                             width: 80,
                             decoration: BoxDecoration(
-                              // color: Colors.red,
                                 boxShadow: [
                                   BoxShadow(
                                       color: Colors.orange.withOpacity(0.6),
@@ -139,7 +138,7 @@ class DetailItemScreen extends StatelessWidget {
                               ))),
                     ]),
                     Container(
-                      margin: EdgeInsets.only(left: 18, right: 18, bottom: 18, top: 20),
+                      margin: const EdgeInsets.only(left: 18, right: 18, bottom: 18, top: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -148,7 +147,7 @@ class DetailItemScreen extends StatelessWidget {
                               size: 14,
                               weight: FontWeight.w600,
                               color: Colors.white),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
                           Row(

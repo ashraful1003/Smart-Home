@@ -52,81 +52,84 @@ class _LandingScreenState extends State<LandingScreen> {
                     HapticFeedback.lightImpact();
                   });
                 },
-                child: Stack(
-                  children: [
-                    AnimatedContainer(
-                      duration: Duration(seconds: 1),
-                      curve: Curves.fastLinearToSlowEaseIn,
-                      width: index == currentIndex ? 116 : 65,
-                      alignment: Alignment.center,
-                      child: AnimatedContainer(
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 5),
+                  child: Stack(
+                    children: [
+                      AnimatedContainer(
                         duration: Duration(seconds: 1),
                         curve: Curves.fastLinearToSlowEaseIn,
-                        height: 55,
-                        width: index == currentIndex ? 121 : 68,
+                        width: index == currentIndex ? 116 : 65,
                         alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(8),
+                        child: AnimatedContainer(
+                          duration: Duration(seconds: 1),
+                          curve: Curves.fastLinearToSlowEaseIn,
+                          height: 55,
+                          width: index == currentIndex ? 121 : 68,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                         ),
                       ),
-                    ),
-                    AnimatedContainer(
-                      duration: Duration(seconds: 1),
-                      curve: Curves.fastLinearToSlowEaseIn,
-                      width: index == currentIndex
-                          ? displayWidth * .31
-                          : displayWidth * .18,
-                      child: Stack(
-                        children: [
-                          Row(
-                            children: [
-                              /// icon & text r modhe faka
-                              AnimatedContainer(
-                                duration: Duration(seconds: 1),
-                                curve: Curves.fastLinearToSlowEaseIn,
-                                width: index == currentIndex
-                                    ? displayWidth * .13
-                                    : 0,
-                              ),
-                              Visibility(
-                                visible: index == currentIndex ? true : false,
-                                child: AnimatedOpacity(
-                                  opacity: index == currentIndex ? 1 : 0,
-                                  duration: const Duration(seconds: 1),
+                      AnimatedContainer(
+                        duration: Duration(seconds: 1),
+                        curve: Curves.fastLinearToSlowEaseIn,
+                        width: index == currentIndex
+                            ? displayWidth * .31
+                            : displayWidth * .18,
+                        child: Stack(
+                          children: [
+                            Row(
+                              children: [
+                                /// icon & text r modhe faka
+                                AnimatedContainer(
+                                  duration: Duration(seconds: 1),
                                   curve: Curves.fastLinearToSlowEaseIn,
-                                  child: Text(
-                                    index == currentIndex
-                                        ? '${listOfStrings[index]}'
-                                        : '',
-                                    style: TextStyle(
-                                      color: hexToColor(mains2),
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 14,
+                                  width: index == currentIndex
+                                      ? displayWidth * .13
+                                      : 0,
+                                ),
+                                Visibility(
+                                  visible: index == currentIndex ? true : false,
+                                  child: AnimatedOpacity(
+                                    opacity: index == currentIndex ? 1 : 0,
+                                    duration: const Duration(seconds: 1),
+                                    curve: Curves.fastLinearToSlowEaseIn,
+                                    child: Text(
+                                      index == currentIndex
+                                          ? '${listOfStrings[index]}'
+                                          : '',
+                                      style: TextStyle(
+                                        color: hexToColor(mains2),
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 14,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              AnimatedContainer(
-                                duration: Duration(seconds: 1),
-                                curve: Curves.fastLinearToSlowEaseIn,
-                                width: 20,
-                              ),
-                              Icon(
-                                listOfIcons[index],
-                                size: 24,
-                                color: hexToColor(mains2),
-                              ),
-                            ],
-                          ),
-                        ],
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                AnimatedContainer(
+                                  duration: Duration(seconds: 1),
+                                  curve: Curves.fastLinearToSlowEaseIn,
+                                  width: 20,
+                                ),
+                                Icon(
+                                  listOfIcons[index],
+                                  size: 24,
+                                  color: hexToColor(mains2),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
