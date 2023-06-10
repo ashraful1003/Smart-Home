@@ -1,4 +1,4 @@
-package com.example.smart_home
+package flutter.innovainfosys.ashraful
 
 import io.flutter.embedding.android.FlutterActivity
 
